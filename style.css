@@ -1,47 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&display=swap");
-
 body {
   background: linear-gradient(236.85deg, #170432 27.26%, #5134a7 96.03%);
   font-family: "Gemunu Libre", sans-serif;
   color: #1c1c1c;
-}
-.container {
-  background: #f5ecff;
-  box-shadow: 6px 6px 6px #1e0e2f;
-  border-radius: 15px;
-  margin: 65px;
-  padding: 64px;
-  color: #1c1c1c;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
-.cabecalho {
+header {
   display: flex;
   justify-content: space-between;
 }
 
-.perfil {
+.caixa, .social {
+  background: #f5ecff;
+  box-shadow: 6px 6px 6px #1e0e2f;
+  border-radius: 15px;
   display: flex;
+  width: 940px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #1c1c1c;
 }
-.fotoPerfil {
+
+.foto-perfil {
   border-radius: 460px;
   max-height: 160px;
   max-width: 160px;
   box-shadow: 3px 6px 6px #1e0e2f;
-}
-.titulo {
-  margin-left: 16px;
+  margin: 10px;
 }
 
-.titulo h1 {
-  font-weight: 700;
-  font-size: 36px;
+.titulo-principal {
+  margin-left: 16px;
+  font-weight: bold;
+  font-size: 40px;
 }
-.titulo h3 {
+
+.subtitulo {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
+  padding: 0 10px;
 }
+
 .tema button {
-  align-self: flex-end;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   font-size: 18px;
   box-sizing: border-box;
   padding: 8px 16px;
@@ -50,109 +54,64 @@ body {
   border: 2px solid #0e1d2f;
   box-shadow: 3px 3px 3px #1e0e2f;
 }
-.portfolio {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 16px;
-}
-.projetos {
-  max-height: 1000px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  list-style: none;
-
-  padding: 8px 32px;
-  background: linear-gradient(230.65deg, #8b49fe 27.49%, #b69cfc 83.19%);
-  border-radius: 15px;
-  box-shadow: 4px 6px 6px #1e0e2f;
-  margin-top: 15px;
-}
-.codepen {
-  max-height: 200px;
-}
-
-/*.conquistas {
-  height: 1000px;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 32px;
-  background: linear-gradient(230.65deg, #8b49fe 27.49%, #a29cfc 83.19%);
-  border-radius: 20px;
-  box-shadow: 4px 6px 6px #1e0e2f;
-}*/
-
-.projetos ul {
-  list-style: none;
-  padding-left: 0;
-  font-weight: 700;
-  font-size: 36px;
-}
 
 .social {
   display: flex;
-  flex-direction: row;
-  padding-top: 15px;
+  width: 940px;
+  margin-top: 10px;
+	padding: 18px 20px;
 }
 
-.projeto li {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 38px;
+.social a {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
 
+ .lista-tarefas, .tabela-classificacao, .supertrunfo, .aluraflix, .mentalista, .conversor {
+  margin: 10px auto;
+  background: #f5ecff;
+  box-shadow: 6px 6px 6px #1e0e2f;
+  border-radius: 15px;
+  width: 940px;
+  
+  padding: 30px;
   color: #1c1c1c;
-  text-decoration: none;
+    
 }
 
-/*.conquistas ul {
-  list-style: none;
-  padding-left: 0;
-  font-weight: 700;
-  font-size: 36px;
-  display: flex;
-  flex-direction: column;
+.projetos {
+ list-style-type: none; 
 }
 
-.conquistas li {
-  list-style-type: none;
-}
-
-.conquistas img {
-  max-height: 100px;
-} */
 .dark {
   background: linear-gradient(230.65deg, #0d0630 27.49%, #250140 83.19%);
   box-shadow: 2px 2px 4px #f20000;
   border-radius: 20px;
 }
-.dark .container {
+.dark .caixa, .dark .social, .dark .lista-tarefas, .dark .tabela-classificacao, .dark .supertrunfo, .dark .aluraflix, .dark .mentalista, .dark .conversor  {
   background: #000000;
   box-shadow: 6px 6px 6px #f20000;
   border-radius: 20px;
   color: #f6f6f6;
+  text-shadow: 6px 6px 6px #f20000;
 }
-.dark .portfolio {
+.dark .portifolio {
   color: #1c1c1c;
 }
 
-.dark .fotoPerfil {
+.dark .foto-perfil {
   border-radius: 460px;
   max-height: 150px;
   max-width: 150px;
   box-shadow: 3px 6px 6px #f20000;
 }
 
-.dark .projetos {
+/*.dark .projetos {
   background: linear-gradient(230.65deg, #240b4f 27.49%, #3d0680 83.19%);
   box-shadow: 4px 6px 6px #f20000;
   border-radius: 15px;
-}
+}*/
 
 .dark .tema button {
   background: #1c1c1c;
@@ -164,22 +123,23 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #1c1c1c;
-  border: 1.8px solid #1c1c1c;
+  border: 1.8px solid #5d00ff;
   border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ecf4ff;
+  background: #6a00ff;
+  border: 1.8px solid #ff0000;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ecf4ff;
+  background: #8b99ad;
   border-radius: 100px;
   box-shadow: inset 0px 0px 0px 0px #f0f0f0;
   margin: 15px 0px;
