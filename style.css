@@ -69,13 +69,13 @@ header {
 }
 
  .lista-tarefas, .tabela-classificacao, .supertrunfo, .aluraflix, .mentalista, .conversor {
-  margin: 10px auto;
+  margin: 10px auto ;
   background: #f5ecff;
   box-shadow: 6px 6px 6px #1e0e2f;
   border-radius: 15px;
-  width: 940px;
+  width: 85%;
   
-  padding: 30px;
+  padding: 40px;
   color: #1c1c1c;
     
 }
